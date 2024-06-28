@@ -1,75 +1,58 @@
-/*!
-
-=========================================================
-* Black Dashboard React v1.2.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/black-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import Dashboard from "views/Dashboard.js";
-import Icons from "views/Icons.js";
 import Strategies from "views/Strategies.js";
-import Notifications from "views/Notifications.js";
-import Rtl from "views/Rtl.js";
+import SelfTrading from "views/SelfTrading.js";
+import TradeTable from "views/MyTrades.js";
+import RTL from "views/Rtl.js";
 import TableList from "views/TableList.js";
 import Backtesting from "views/Backtesting.js";
-import UserProfile from "views/UserProfile.js";
+import TradesManage from "views/BotManager.js";
 
 var routes = [
   {
     path: "/dashboard",
-    name: "Dashboard",
-    rtlName: "لوحة القيادة",
-    icon: "tim-icons icon-chart-pie-36",
+    name: "Live Chart",
+    rtlName: "גרפים",
+    icon: "tim-icons icon-chart-bar-32",
     component: <Dashboard />,
-    layout: "/admin",
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    rtlName: "الرموز",
-    icon: "tim-icons icon-atom",
-    component: <Icons />,
     layout: "/admin",
   },
   {
     path: "/strategies",
     name: "Strategies",
-    rtlName: "خرائط",
-    icon: "tim-icons icon-pin",
+    rtlName: "אסטרטגיות",
+    icon: "tim-icons icon-book-bookmark",
     component: <Strategies />,
     layout: "/admin",
   },
   {
-    path: "/notifications",
-    name: "Notifications",
-    rtlName: "إخطارات",
-    icon: "tim-icons icon-bell-55",
-    component: <Notifications />,
+    path: "/self-trading",
+    name: "Individual Trading",
+    rtlName: "מסחר עצמאי",
+    icon: "tim-icons icon-user-run",
+    component: <SelfTrading />,
     layout: "/admin",
   },
   {
-    path: "/user-profile",
-    name: "User Profile",
-    rtlName: "ملف تعريفي للمستخدم",
-    icon: "tim-icons icon-single-02",
-    component: <UserProfile />,
+    path: "/trades-table",
+    name: "Trades Table",
+    rtlName: "עסקאות",
+    icon: "tim-icons icon-coins",
+    component: <TradeTable />,
+    layout: "/admin",
+  },
+  {
+    path: "/bots-manager",
+    name: "Bot Manager",
+    rtlName: "ניהול עסקה",
+    icon: "tim-icons icon-wallet-43",
+    component: <TradesManage />,
     layout: "/admin",
   },
   {
     path: "/tables",
-    name: "Table List",
-    rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-puzzle-10",
+    name: "Prices List",
+    rtlName: "מחירי מטבעות",
+    icon: "tim-icons icon-bold",
     component: <TableList />,
     layout: "/admin",
   },
@@ -77,16 +60,16 @@ var routes = [
     path: "/Backtesting",
     name: "Backtesting",
     rtlName: "בדיקה לאחור",
-    icon: "tim-icons icon-align-center",
+    icon: "tim-icons icon-zoom-split",
     component: <Backtesting />,
     layout: "/admin",
   },
   {
     path: "/rtl-support",
     name: "RTL Support",
-    rtlName: "ار تي ال",
+    rtlName: "אנגלית",
     icon: "tim-icons icon-world",
-    component: <Rtl />,
+    component: <RTL />,
     layout: "/rtl",
   },
 ];

@@ -110,19 +110,17 @@ function Backtesting() {
             </CardBody>
           </Card>
         </Col>
-      </Row>
-      {loading ? ( // Display loading indicator if data is loading
-        <div>Loading data...</div>
-      ) : data.length > 0 && (
-        <Row>
-          <Col lg="12" md="12">
+        <Col lg="8" md="12">
+          {loading ? ( // Display loading indicator if data is loading
+            <div>Loading data...</div>
+          ) : data.length > 0 && (
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">{selectedStrategy}</CardTitle>
-                <div>
+                <CardTitle tag="h4" style={{ fontSize: '16px' }}>{selectedStrategy}</CardTitle>
+                <div style={{ fontSize: '12px' }}>
                   <strong>Time Frame: </strong>{timeFrame}
                 </div>
-                <div>
+                <div style={{ fontSize: '12px' }}>
                   <strong>Interval: </strong>{interval} days
                 </div>
               </CardHeader>
@@ -140,14 +138,14 @@ function Backtesting() {
                   <tbody>
                     {data.map((item, index) => (
                       <tr key={index}>
-                        <td>{item.currency}</td>
-                        <td className="text-center">
+                        <td style={{ fontSize: '12px' }}>{item.currency}</td>
+                        <td style={{ fontSize: '12px' }} className="text-center">
                           {item.return !== undefined && !isNaN(item.return)
                             ? item.return.toFixed(6)
                             : 'N/A'}
                         </td>
                         {headers.filter(header => header !== 'currency' && header !== 'return').map((header, idx) => (
-                          <td key={idx}>{item[header]}</td>
+                          <td style={{ fontSize: '12px' }}key={idx}>{item[header]}</td>
                         ))}
                       </tr>
                     ))}
@@ -155,9 +153,9 @@ function Backtesting() {
                 </Table>
               </CardBody>
             </Card>
-          </Col>
-        </Row>
-      )}
+          )}
+        </Col>
+      </Row>
     </div>
   );
 }

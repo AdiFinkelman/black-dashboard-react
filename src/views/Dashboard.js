@@ -32,8 +32,10 @@ function Dashboard(props) {
       try {
         const response = await axios.get(`http://127.0.0.1:5586/binance/${searchTerm}`);
         setHistoricalPrices(response.data.historical_prices);
-        setCurrentPrice(response.data.current_price); // Assuming the API returns the current price
-        setCoinName(response.data.coin_name); // Assuming the API returns the coin name
+        const last_price = response.data.historical_prices[response.data.historical_prices.length - 1].price;
+        setCurrentPrice(last_price); // Assuming the API returns the current price
+        setCoinName(response.data.coin); // Assuming the API returns the coin name
+        console.log("API response", response.data.coin)
       } catch (error) {
         console.error("Error fetching data:", error);
         setError("There is no such symbol.");
@@ -258,11 +260,10 @@ function Dashboard(props) {
             <Col md="12">
               <Card className="card-chart">
                 <CardHeader>
-                  <h5 className="card-category">Overview</h5>
+                  <h4 className="card-category">{coinName}</h4>
                   <CardTitle tag="h3">
-                    {currentPrice && coinName && (
+                    {currentPrice && (
                       <div>
-                        <h4>{coinName}</h4>
                         <h5>Current Price: ${currentPrice}</h5>
                       </div>
                     )}
