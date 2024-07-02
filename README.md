@@ -1,67 +1,90 @@
-# [Black Dashboard React](https://demos.creative-tim.com/black-dashboard-react/#/dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-react%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20React%20by%20Creative%20Tim%20%7C%20Free%20React%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-react%2F&via=creativetim&hashtags=react%2Ccreativetim%2Cdark%2Cdashboard%2Cbootstrap%2Creactstrap%2Creactjs)
+# Botnance Trading Platform Frontend
+This project is a comprehensive trading dashboard that provides various features including trading strategies, a table of trades, real-time coin prices, and historical price charts. The dashboard is built with React and utilizes REST APIs to fetch and manage data.
 
-![version](https://img.shields.io/badge/version-1.2.2-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/black-dashboard-react.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/black-dashboard-react.svg?maxAge=2592000)]() [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+## Features
 
-![Product Gif](./github-assets/black-dashboard-react.gif)
+### 1. Dashboard
+Provides a historical price chart for a selected cryptocurrency and allows users to view data in day, week, or month intervals.
 
-Black Dashboard React is a beautiful [Bootstrap 4](http://getbootstrap.com/), [Reacstrap](https://reactstrap.github.io/) and [React](https://reactjs.org/) ([create-react-app](https://github.com/facebook/create-react-app)) Admin Dashboard with a huge number of components built to fit together and look amazing. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
-Black Dashboard React comes packed with all plugins that you might need inside a project and documentation on how to get started. It is light and easy to use, and also very powerful.
+**Components:**
+- `Dashboard`: Handles coin searches, fetches historical data, and displays charts with options to switch between day, week, and month views.
 
-Black Dashboard React features over 16 individual components, giving you the freedom of choosing and combining. This means that there are thousands of possible combinations. All components can take variations in color, that you can easily modify using SASS files. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
-We thought about everything, so this dashboard comes with 2 versions, Dark Mode and Light Mode.
+### 2. Strategies
+Provides explanations of different trading strategies used in the trading system.
 
-Special thanks go for the owners of these plugins:
+**Components:**
+- `Strategies`: Lists and explains various trading strategies.
 
-- [Perfect Scrollbar](http://utatti.github.io/perfect-scrollbar/) for the nice scrollbars for windows.
-- [React Chartjs](http://jerairrest.github.io/react-chartjs-2/) for the wonderful wrapper for charts.
-- [Chartjs](https://www.chartjs.org/) for the wonderful charts.
+### 3. Trade Table
+Displays a comprehensive table of all trades, both open and closed, including details such as symbol, strategy used, start and end prices, and trade status.
 
-We are very excited to share this dashboard with you and we look forward to hearing your feedback!
+**Components:**
+- `TradeTable`: Fetches and displays trades data from the backend.
+- `CombinedComponent`: Integrates the `TradeTable` with balance display.
 
-**Example Pages** We wanted to fully display the power of this dashboard, so the kit comes packed with examples showing you how to use the components.
+### 4. Coin Prices
+Shows the current prices of various cryptocurrencies.
 
-## Table of Contents
+**Components:**
+- `CoinPrices`: Fetches and displays the latest coin prices from the backend.
 
-- [Versions](#versions)
-- [Demo](#demo)
-- [Quick Start](#quick-start)
-- [Documentation](#documentation)
-- [File Structure](#file-structure)
-- [Browser Support](#browser-support)
-- [Resources](#resources)
-- [Reporting Issues](#reporting-issues)
-- [Technical Support or Questions](#technical-support-or-questions)
-- [Licensing](#licensing)
-- [Useful Links](#useful-links)
+### 5. Self Trading
+Allows users to perform manual trading operations such as buying and selling assets.
 
-## Versions
+**Components:**
+- `SelfTrading`: Provides forms for buying and selling cryptocurrencies, and displays notifications for trade actions.
 
-[<img src="./github-assets/html.png" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard)
-[<img src="./github-assets/react.svg" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-react)[<img src="./github-assets/vuejs.png" width="60" height="60" />](https://www.creative-tim.com/product/vue-black-dashboard)
+### 6. Bot Manager
+Manages trading bots and their configurations.
 
-| HTML                                                                                                                                                                | React                                                                                                                                                                   | Vue                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Black Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/93/thumb/opt_bd_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard) | [![Black Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/136/thumb/opt_bd_react.jpg)](https://www.creative-tim.com/product/black-dashboard-react) | [![Vue Black Dashboard](https://s3.amazonaws.com/creativetim_bucket/products/99/thumb/opt_bd_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-black-dashboard) |
+### 7. Prices List
+Displays a list of prices for different cryptocurrencies.
 
-## Demo
+### 8. Backtesting
+Allows users to test trading strategies against historical data.
 
-| Dashboard                                                                                                             | User Profile                                                                                                            | Tables                                                                                                               | Maps                                                                                                       | Notification                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [![Start page](./github-assets/dashboard-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/dashboard) | [![User profile page](./github-assets/user-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/user-page) | [![Tables page ](./github-assets/table-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/table-list) | [![Maps Page](./github-assets/maps-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/maps) | [![Notification page](./github-assets/notifications-page.png)](https://demos.creative-tim.com/black-dashboard-react/#/notifications) |
+### 9. RTL Support
+Provides support for Right-To-Left languages, such as Hebrew.
 
-[View More](https://demos.creative-tim.com/black-dashboard-react/#/dashboard).
+#### Features Map
+| Live Chart                                                                                                             | Strategies                                                                                                            | Self Trading                                                                                                               | Trades Table                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- 
+| [![Dashboard](https://github.com/AdiFinkelman/black-dashboard-react/assets/126038641/73c65c03-45d1-4bdd-9ecc-15964bd68880)]([http://localhost:3000/admin/dashboard]) | [![Strategies](https://github.com/AdiFinkelman/black-dashboard-react/assets/126038641/50bf276c-541f-4f15-a8f3-b386b57a9d14)]([http://localhost:3000/admin/strategies]) | [![Self Trade](https://github.com/AdiFinkelman/black-dashboard-react/assets/126038641/f95ecbc3-6dee-4512-9fdb-d2b2a341cbe3)](http://localhost:3000/admin/self-trading) |[![Trades Table](https://github.com/AdiFinkelman/black-dashboard-react/assets/126038641/00aa5c68-2a43-4bf8-a654-06499d152c5e)](http://localhost:3000/admin/trades-table) |
 
-## Quick start
+| Bot Manager                                                                                                             | Prices List                                                                                                            | Backtesting                                                                                                               | RTL Support                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- 
+| [![Bot Manager](https://github.com/AdiFinkelman/black-dashboard-react/assets/126038641/b3fec77c-2cb2-490e-aaf7-172d00a7bc6f)]([http://localhost:3000/admin/bots-manager]) | [![Prices List](https://github.com/AdiFinkelman/black-dashboard-react/assets/126038641/4a482283-10cc-4519-a9c7-2a943cbad2b1)](http://localhost:3000/admin/tables) | [![Backtesting](https://github.com/AdiFinkelman/black-dashboard-react/assets/126038641/133ac3bd-5094-4297-b57f-4aa123626d06)](http://localhost:3000/admin/Backtesting) | [![RTL](https://github.com/AdiFinkelman/black-dashboard-react/assets/126038641/e42cfb6b-4306-477b-a1aa-8af0eef8a5fc)](http://localhost:3000/rtl/rtl-support)
 
-Quick start options:
+## Installation
 
-- Clone the repo: `git clone https://github.com/creativetimofficial/black-dashboard-react.git`.
-- [Download from Github](https://github.com/creativetimofficial/black-dashboard-react/archive/master.zip).
-- [Download from Creative Tim](https://www.creative-tim.com/product/black-dashboard-react).
+To get started with this project, follow these steps:
 
-## Documentation
+1. **Clone the repository:**
 
-The documentation for the Black Dashboard React is hosted at our [website](https://demos.creative-tim.com/black-dashboard-react/#/documentation/tutorial).
+    ```bash
+    git clone https://github.com/AdiFinkelman/black-dashboard-react.git
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd black-dashboard-react
+    ```
+
+3. **Install the dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+4. **Start the development server:**
+
+    ```bash
+    npm start
+    ```
+
+   The app will be available at `http://localhost:3000`.
+
 
 ## File Structure
 
@@ -118,17 +141,16 @@ black-dashboard-react
     │   │   └── Admin.js
     │   └── RTL
     │       └── RTL.js
-    ├── variables
-    │   └── charts.js
     └── views
+        ├── Backtesting.js
+        ├── BotManager.js
         ├── Dashboard.js
         ├── Icons.js
-        ├── Map.js
-        ├── Notifications.js
+        ├── MyTrades.js
         ├── Rtl.js
-        ├── TableList.js
-        ├── Typography.js
-        └── UserProfile.js
+        ├── SelfTrading.js
+        ├── Strategies.js 
+        └── TableList.js
 ```
 
 ## Browser Support
@@ -137,50 +159,33 @@ At present, we officially aim to support the last two versions of the following 
 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
+## API Endpoints
+
+Make sure to have the backend server running on `http://127.0.0.1:5586` for the application to function properly. The following endpoints are used by the frontend:
+
+- **Trades:** `GET /trades`, `POST /trade/buy`, `PUT /trade/:id`
+- **Balance:** `GET /balance`
+- **Historical Prices:** `GET /binance/<symbol>`
+- **Strategies:** `GET /strategy_descriptions`
+- **Prices List:** `GET /binance`
+- **Backtesting:** `GET /backtest`
+
 ## Resources
 
 - Demo: https://demos.creative-tim.com/black-dashboard-react/#/dashboard
 - Download Page: https://www.creative-tim.com/product/black-dashboard-react
-- Documentation: https://demos.creative-tim.com/black-dashboard-react/#/documentation/tutorial
-- License Agreement: https://www.creative-tim.com/license
-- Support: https://www.creative-tim.com/contact-us
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/black-dashboard-react/issues)
 
-## Reporting Issues
+- ## Contributing
 
-We use GitHub Issues as the official bug tracker for the Black Dashboard React. Here are some advices for our users that want to report an issue:
+We welcome contributions to the project! If you have any suggestions, improvements, or bug fixes, please follow these steps:
 
-1. Make sure that you are using the latest version of the Black Dashboard React. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
-
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us) instead of opening an issue.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your forked repository.
+5. Create a pull request from your forked repository to the main repository.
 
 ## Licensing
 
 - Copyright 2023 Creative Tim (https://www.creative-tim.com)
 - Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
-
-## Useful Links
-
-More products from Creative Tim: <https://www.creative-tim.com/products>
-
-Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
-
-Freebies: <https://www.creative-tim.com/products>
-
-Affiliate Program (earn money): <https://www.creative-tim.com/affiliates/new>
-
-Social Media:
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Google+: <https://plus.google.com/+CreativetimPage>
-
-Instagram: <https://instagram.com/creativetimofficial>
