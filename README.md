@@ -76,6 +76,7 @@ To get started with this project, follow these steps:
     ```bash
     sudo apt install npm  # If npm not installed
     npm install
+    npm install --save-dev ajv@^7 
     ```
 
 4. **Start the development server:**
