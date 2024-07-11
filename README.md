@@ -74,7 +74,7 @@ To get started with this project, follow these steps:
 3. **Install the dependencies:**
 
     ```bash
-    sudo apt install npm  # If npm not installed
+    sudo apt install npm  # If npm not installed on Linux
     npm install
     npm install --save-dev ajv@^7 
     ```
