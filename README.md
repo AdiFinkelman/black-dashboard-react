@@ -74,6 +74,7 @@ To get started with this project, follow these steps:
 3. **Install the dependencies:**
 
     ```bash
+    sudo apt install npm  # If npm not installed
     npm install
     ```
 
